@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SenseAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="llm.css">
+    <link rel="stylesheet" href="index.css">
+    
+   
+
+    
+</head>
+    <!-- partial:index.partial.html -->
+    <body>
+
+        <!-- header design -->
+        <header class="header">
+            <a href="#" class="logo">SenseAI</a>
+
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <% let string = "" %>
+<% if (locals.ejsprompt) { %>
+<% } %>
+  <form action="/prompt" method="post" id="form" >
+    <textarea id="text" name="prompting"></textarea>
+    <!-- <label for="btnSubmit">CLICK ME</label>
+     <input type="submit" id="btnSubmit" name="btnSubmit"> -->
+</form>
+<div class="secondcontainer " >
+  <div class="container">
+    <div class="options">
+      <div class="anguage">
+        <p>Language</p>
+        <select name="input-language" id="language"></select>
+      </div>
+    </div>
+    <div class="line"></div>
+    <button class="btns record">
+      <div class="icon">
+        <ion-icon name="mic-outline" class="favicon"></ion-icon>
+        <!-- <img src="bars.svg" alt="" /> -->
+      </div>
+      <p>Start Listening</p>
+    </button>
+    <p class="llmheading">Result :</p>
+    <div
+      class="result"
+      spellcheck="false"
+      placeholder="your text will be displayed here"
+    >
+      <p class="interim"></p>
+    </div>
+    <div class="buttons">
+      <button class="btns clear">
+        <ion-icon name="trash-outline" class="favicon"></ion-icon>
+        <p>Clear</p>
+      </button>
+      <!-- <button class="btns download" disabled>
+        <ion-icon name="cloud-download-outline"></ion-icon>
+        <p>Download</p>
+      </button> -->
+    </div>
+  </div>
+</div>
+
+    
+            <!-- speech to text -->
+         
+        <!-- services section design -->
+        <section class="services" id="services">
+            <h2 class="heading">SenseAI <span>can help with</span></h2>
+
+            <div class="services-container">
+                <div class="services-box">
+                    <!-- <i class='bx bx-code-alt'></i> -->
+                    <img class="train-gif" src="images/train--1.gif" alt="train-gif">
+                    <h3>Travel Details</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi itaque similique, architecto
+                        eaque ut quas delectus pariatur nesciunt in eligendi mollitia dicta.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div class="services-box">
+                    <!-- <i class='bx bxs-paint'></i> -->
+                    <img class="doc-gif" src="images/output-onlinegiftools.gif" alt="doctor">
+                    <h3>Doctor appointment</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi itaque similique, architecto
+                        eaque ut quas delectus pariatur nesciunt in eligendi mollitia dicta.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div class="services-box">
+                    <!-- <i class='bx bx-bar-chart-alt'></i> -->
+                    <img class="ai-gif" src="images/ai-voice-generator--1.gif" alt="voice-based-gif">
+                    <h3>Voice based interaction</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi itaque similique, architecto
+                        eaque ut quas delectus pariatur nesciunt in eligendi mollitia dicta.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+        <script>
+            let string = `<%= ejsprompt%>`;
+            if(string!=""){
+                document.querySelector("#text").value = `${string}`;
+            }
+            else{
+                document.querySelector("#text").value = `Your prompt will be displayed here`;
+            }
+        </script>
+        <!-- Add this in your HTML file if you're not using npm/yarn -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <script src="languages.js"></script>
+        <script src="llm.js"></script> 
+    </body>
+</html>
