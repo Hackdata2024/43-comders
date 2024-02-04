@@ -1,4 +1,4 @@
-This is readme file of slice.ai
+This is readme file of team Comders
 Team members -
 Dev Sharma
 Himanshu sharma
@@ -12,7 +12,7 @@ Libraries - Axios, CORS, nlp.js, natural.js, google generative ai
 Models used - gemini pro, embedding 001
 Template engine - EJS
 
-#steps to dive into the world of slice ai
+#steps to dive into the world of Jester
 
 1. Clone the repo and open the right directory in terminal
 2. Execute the command npm i to download all the dependencies in package.json
