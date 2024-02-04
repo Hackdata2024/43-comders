@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Quicksand", sans-serif;
+}
+
+:root {
+  --bg-color: #eaf4f6;
+  --text-color: #333;
+  --main-color: #25434d;
+  --white-color: #fdfdfd;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header {
+  margin: 3vw;
+  padding: 2rem 7%;
+  background-color: #25434d;
+  margin-top: 2vh;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 600;
+  margin-right: auto;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 1.7rem;
+  color: var(--white-color);
+  font-weight: 500;
+  margin-right: 3.5rem;
+}
+
+.navbar a.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 0.2rem;
+  background: var(--white-color);
+}
+
+.header.sticky .navbar a::before {
+  background: var(--main-color);
+  opacity: 0.7;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 7% 2rem;
+}
+.btn {
+  display: inline-block;
+  padding: 1.2rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 0.6rem;
+  box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  border: 0.2rem solid transparent;
+  transition: 0.5s ease;
+  color: white;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #25434d;
+  border-color: var(--main-color);
+}
+
+span {
+  color: var(--main-color);
+}
+
+.heading {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.services {
+  min-height: auto;
+  padding-bottom: 10rem;
+}
+
+.services h2 {
+  margin-bottom: 5rem;
+}
+
+.services .services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.services-container .services-box {
+  flex: 1 1 30rem;
+  background: var(--bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
+  text-align: center;
+  border-top: 0.6rem solid var(--main-color);
+  border-bottom: 0.6rem solid var(--main-color);
+  transition: 0.5s ease;
+}
+
+.services-container .services-box:hover {
+  box-shadow: 0 0.1rem 2rem var(--shadow-color);
+  transform: scale(1.02);
+}
+
+.services-box i {
+  font-size: 7rem;
+  color: var(--main-color);
+}
+
+.services-box h3 {
+  font-size: 2.6rem;
+  transition: 0.5s ease;
+}
+
+.services-box:hover h3 {
+  color: var(--main-color);
+}
+
+.services-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar a:nth-child(1) {
+    color: var(--main-color);
+  }
+
+  .navbar a.active::before {
+    background: var(--main-color);
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 896px) {
+  .navbar a:nth-child(2) {
+    color: var(--main-color);
+  }
+}
+
+@media (max-width: 780px) {
+  .navbar a:nth-child(2) {
+    color: var(--white-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--text-color);
+  }
+
+  .navbar a:nth-child(1),
+  .navbar a:nth-child(2) {
+    color: var(--text-color);
+  }
+
+  .navbar a.active {
+    color: var(--main-color);
+  }
+
+  .navbar a::before {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.stbox {
+  background-color: rgb(190 227 244);
+box-shadow: 4px 4px 14px grey;
+}
+
+.ai-gif {
+  height: 17vh;
+  width: 8vw;
+}
+.train-gif {
+  height: 17vh;
+  width: 8vw;
+}
+.doc-gif {
+  height: 17vh;
+  width: 8vw;
+}
+.genAIbox{
+  width: 50%;
+  height:50%;
+  border-radius: 10px ;
+}
+input[type="text"], textarea {
+  border-radius: 20px;
+  background-color :rgb(190 227 244); 
+  box-shadow: 4px 4px 14px grey;
+  width: 40vw;
+  min-height: 70vh;
+  margin: 10vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  font-size: 18px; /* Adjust the font size as needed */
+  text-align: start;
+  padding: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+  width: 80%;
+
+}
+.flexic{
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
+  /* gap: 10px; / */
+} 
+#text {
+  text-align: left;
+}
+#form{
+  /* margin-left:0;
+  margin: none;
+  width: 90%;
+  height: 100%; */
+}
