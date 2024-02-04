@@ -1,11 +1,11 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SenseAI</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <title>Jester</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -22,14 +22,14 @@
 
         <!-- header design -->
         <header class="header">
-            <a href="#" class="logo">SenseAI</a>
+            <a href="#" class="logo">Jester</a>
 
             <nav class="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
+                <a href="#home" class="link active">Home</a>
+                <a href="#about"class="link">About</a>
+                <a href="#services"class="link">Services</a>
+                <a href="#portfolio"class="link">Portfolio</a>
+                <a href="https://www.cuchd.in"class="link">Contact</a>
             </nav>
         </header>
         <% let string = "" %>
@@ -77,47 +77,44 @@
   </div>
 </div>
 
-    
             <!-- speech to text -->
          
         <!-- services section design -->
         <section class="services" id="services">
-            <h2 class="heading">SenseAI <span>can help with</span></h2>
+            <h2 class="heading">Jester <span>can help with</span></h2>
 
             <div class="services-container">
                 <div class="services-box">
                     <!-- <i class='bx bx-code-alt'></i> -->
                     <img class="train-gif" src="images/train--1.gif" alt="train-gif">
                     <h3>Travel Details</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi itaque similique, architecto
-                        eaque ut quas delectus pariatur nesciunt in eligendi mollitia dicta.</p>
+                    <p>Provide users with the ability to search and book flights and hotels based on their preferences.Use natural language processing to understand user queries, such as "Find me a flight to Paris next weekend"."</p>
                     <a href="#" class="btn">Read More</a>
                 </div>
                 <div class="services-box">
                     <!-- <i class='bx bxs-paint'></i> -->
                     <img class="doc-gif" src="images/output-onlinegiftools.gif" alt="doctor">
                     <h3>Doctor appointment</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi itaque similique, architecto
-                        eaque ut quas delectus pariatur nesciunt in eligendi mollitia dicta.</p>
+                    <p>Allow users to book, reschedule, or cancel doctor appointments through a conversational interface.
+                      Provide a user-friendly calendar interface to choose available time slots based on the doctor's availability.</p>
                     <a href="#" class="btn">Read More</a>
                 </div>
                 <div class="services-box">
                     <!-- <i class='bx bx-bar-chart-alt'></i> -->
                     <img class="ai-gif" src="images/ai-voice-generator--1.gif" alt="voice-based-gif">
                     <h3>Voice based interaction</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi itaque similique, architecto
-                        eaque ut quas delectus pariatur nesciunt in eligendi mollitia dicta.</p>
+                    <p>Allow users to interact with the bot using voice commands. For example, users can say, "Book a flight to Paris for next week" or "Find me a nearby doctor for tomorrow." It provides great facility</p>
                     <a href="#" class="btn">Read More</a>
                 </div>
             </div>
         </section>
         <script>
-            let string = `<%= ejsprompt%>`;
+            let string = <%= ejsprompt%>;
             if(string!=""){
-                document.querySelector("#text").value = `${string}`;
+                document.querySelector("#text").value = ${string};
             }
             else{
-                document.querySelector("#text").value = `Your prompt will be displayed here`;
+                document.querySelector("#text").value = Your prompt will be displayed here;
             }
         </script>
         <!-- Add this in your HTML file if you're not using npm/yarn -->
